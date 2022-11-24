@@ -13,6 +13,7 @@
 		C1829C89292D083700A5EA59 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1829C88292D083700A5EA59 /* Assets.xcassets */; };
 		C1829C8C292D083700A5EA59 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1829C8B292D083700A5EA59 /* Preview Assets.xcassets */; };
 		EC3D68E9292F952A00F76450 /* homeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3D68E8292F952A00F76450 /* homeView.swift */; };
+		EC3D68EB292F98E300F76450 /* doneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3D68EA292F98E300F76450 /* doneView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		C1829C88292D083700A5EA59 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C1829C8B292D083700A5EA59 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		EC3D68E8292F952A00F76450 /* homeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeView.swift; sourceTree = "<group>"; };
+		EC3D68EA292F98E300F76450 /* doneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = doneView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,7 +65,6 @@
 		C1829C72292D083600A5EA59 = {
 			isa = PBXGroup;
 			children = (
-				EC3D68E8292F952A00F76450 /* homeView.swift */,
 				C1829C83292D083600A5EA59 /* QatarChallenge Watch App */,
 				C1829C7A292D083600A5EA59 /* Products */,
 			);
@@ -83,6 +84,8 @@
 			children = (
 				C1829C84292D083600A5EA59 /* QatarChallengeApp.swift */,
 				C1829C86292D083600A5EA59 /* ContentView.swift */,
+				EC3D68E8292F952A00F76450 /* homeView.swift */,
+				EC3D68EA292F98E300F76450 /* doneView.swift */,
 				C1829C88292D083700A5EA59 /* Assets.xcassets */,
 				C1829C8A292D083700A5EA59 /* Preview Content */,
 			);
@@ -197,6 +200,7 @@
 			files = (
 				C1829C87292D083600A5EA59 /* ContentView.swift in Sources */,
 				C1829C85292D083600A5EA59 /* QatarChallengeApp.swift in Sources */,
+				EC3D68EB292F98E300F76450 /* doneView.swift in Sources */,
 				EC3D68E9292F952A00F76450 /* homeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
