@@ -15,9 +15,7 @@ struct doneView: View {
             
             VStack{
                 Image("trophy")
-                    .resizable()
-                    .scaledToFit()
-                    .padding(6.0)
+                    .padding(24.0)
                 
                 Text("Você conseguiu!")
                     .font(.system(size: 14))
