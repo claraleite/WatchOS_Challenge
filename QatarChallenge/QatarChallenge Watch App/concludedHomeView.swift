@@ -40,7 +40,7 @@ struct concludedHomeView: View {
                     //Falta colocar tipo de fonte
                     .font(.system(size: 12))
                     .fontWeight(.regular)
-            
+                    
                     
                     ConcludedProgressBar(progress: self.$progressValue)
                         .frame(width: 51, height: 51)
