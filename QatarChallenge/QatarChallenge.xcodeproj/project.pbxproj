@@ -12,6 +12,7 @@
 		C1829C87292D083600A5EA59 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1829C86292D083600A5EA59 /* ContentView.swift */; };
 		C1829C89292D083700A5EA59 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1829C88292D083700A5EA59 /* Assets.xcassets */; };
 		C1829C8C292D083700A5EA59 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1829C8B292D083700A5EA59 /* Preview Assets.xcassets */; };
+		C1829C97292F952500A5EA59 /* ExercisesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1829C96292F952500A5EA59 /* ExercisesView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		C1829C86292D083600A5EA59 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C1829C88292D083700A5EA59 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C1829C8B292D083700A5EA59 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C1829C96292F952500A5EA59 /* ExercisesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExercisesView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				C1829C84292D083600A5EA59 /* QatarChallengeApp.swift */,
+				C1829C96292F952500A5EA59 /* ExercisesView.swift */,
 				C1829C86292D083600A5EA59 /* ContentView.swift */,
 				C1829C88292D083700A5EA59 /* Assets.xcassets */,
 				C1829C8A292D083700A5EA59 /* Preview Content */,
@@ -192,6 +195,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1829C97292F952500A5EA59 /* ExercisesView.swift in Sources */,
 				C1829C87292D083600A5EA59 /* ContentView.swift in Sources */,
 				C1829C85292D083600A5EA59 /* QatarChallengeApp.swift in Sources */,
 			);
