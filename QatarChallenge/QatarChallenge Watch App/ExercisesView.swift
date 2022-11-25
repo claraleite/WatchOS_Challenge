@@ -23,7 +23,7 @@ struct ExercisesView: View {
                 ExercisePageView(firstMovementImage: firstMovementsImages[2], secondMovementImage: secondMovementsImages[2], movementName: movementsNames[2], movementDuration: "45")
                 
                 
-                
+
             }.frame(
                 width: WKInterfaceDevice.current().screenBounds.size.width,
                 height: WKInterfaceDevice.current().screenBounds.size.height

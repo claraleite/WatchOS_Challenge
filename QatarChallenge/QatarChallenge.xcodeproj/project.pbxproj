@@ -16,6 +16,8 @@
 		EC3D68E9292F952A00F76450 /* homeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3D68E8292F952A00F76450 /* homeView.swift */; };
 		EC3D68EB292F98E300F76450 /* doneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3D68EA292F98E300F76450 /* doneView.swift */; };
 		EC3D68ED292F9A7900F76450 /* concludedHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3D68EC292F9A7900F76450 /* concludedHomeView.swift */; };
+		ECD8A1A22930EB4B00F25C5D /* onboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD8A1A12930EB4B00F25C5D /* onboardingView.swift */; };
+		ECD8A1A42930EC0000F25C5D /* OnboardingPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD8A1A32930EC0000F25C5D /* OnboardingPageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		EC3D68E8292F952A00F76450 /* homeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeView.swift; sourceTree = "<group>"; };
 		EC3D68EA292F98E300F76450 /* doneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = doneView.swift; sourceTree = "<group>"; };
 		EC3D68EC292F9A7900F76450 /* concludedHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = concludedHomeView.swift; sourceTree = "<group>"; };
+		ECD8A1A12930EB4B00F25C5D /* onboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = onboardingView.swift; sourceTree = "<group>"; };
+		ECD8A1A32930EC0000F25C5D /* OnboardingPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +91,8 @@
 			isa = PBXGroup;
 			children = (
 				C1829C84292D083600A5EA59 /* QatarChallengeApp.swift */,
+				ECD8A1A12930EB4B00F25C5D /* onboardingView.swift */,
+				ECD8A1A32930EC0000F25C5D /* OnboardingPageView.swift */,
 				C1829C96292F952500A5EA59 /* ExercisesView.swift */,
 				C1829C86292D083600A5EA59 /* ContentView.swift */,
 				EC3D68E8292F952A00F76450 /* homeView.swift */,
@@ -206,9 +212,11 @@
 			files = (
 				C1829C97292F952500A5EA59 /* ExercisesView.swift in Sources */,
 				C1829C87292D083600A5EA59 /* ContentView.swift in Sources */,
+				ECD8A1A22930EB4B00F25C5D /* onboardingView.swift in Sources */,
 				EC3D68ED292F9A7900F76450 /* concludedHomeView.swift in Sources */,
 				C1829C85292D083600A5EA59 /* QatarChallengeApp.swift in Sources */,
 				EC3D68EB292F98E300F76450 /* doneView.swift in Sources */,
+				ECD8A1A42930EC0000F25C5D /* OnboardingPageView.swift in Sources */,
 				EC3D68E9292F952A00F76450 /* homeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
