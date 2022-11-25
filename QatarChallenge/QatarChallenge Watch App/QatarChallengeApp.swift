@@ -9,9 +9,13 @@ import SwiftUI
 
 @main
 struct QatarChallenge_Watch_AppApp: App {
-    var body: some Scene {
+    @SceneBuilder var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationView {
+                onboardingView()
+                    .navigationBarHidden(true)
+            }
         }
+//        WKNotificationScene(controller: NotificationController.self, category: "myCategory")
     }
 }
