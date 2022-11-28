@@ -11,25 +11,26 @@ let backgroundGradient = LinearGradient(
     startPoint: .topLeading, endPoint: .bottomTrailing)
 //let imageBg = Image(systemName: "OnboardingBG")
 
-struct onboardingView: View {
-    @State var shouldShowOnboarding: Bool = true
-    var body: some View {
-        //    NavigationView {
-        VStack(alignment: .leading, spacing: 4) {
-            Text("Home")
-                .bold()
-                .font(.system(size: 16))
-        }
-        //    }
-        .fullScreenCover(isPresented: $shouldShowOnboarding, content: {
-            OnboardingView()
-                .navigationBarHidden(true)
-        })
-    }
-}
+//struct onboardingView: View {
+//    @State var shouldShowOnboarding: Bool = true
+//    var body: some View {
+//        //    NavigationView {
+//        VStack(alignment: .leading, spacing: 4) {
+//            Text("Home")
+//                .bold()
+//                .font(.system(size: 16))
+//        }
+//        //    }
+//        .fullScreenCover(isPresented: $shouldShowOnboarding, content: {
+//            OnboardingView()
+//                .navigationBarHidden(true)
+//        })
+//    }
+//}
 // MARK: - Onboarding
 struct OnboardingView: View {
-    @State var shouldShowOnboarding: Bool = true
+    @Binding var shouldShowOnboarding: Bool
+    
     var body: some View {
         TabView {
             OnboardingPageView(shouldShowOnboarding: $shouldShowOnboarding, image: true, showDismissButton: false, titulo: "Evolução no Esporte", text: "Iremos te instruir com movimentos específicos do Muay Thai.")
@@ -45,6 +46,6 @@ struct OnboardingView: View {
 }
 struct onboardingView_Previews: PreviewProvider {
     static var previews: some View {
-        onboardingView()
+        OnboardingView(shouldShowOnboarding: .constant(true))
     }
 }

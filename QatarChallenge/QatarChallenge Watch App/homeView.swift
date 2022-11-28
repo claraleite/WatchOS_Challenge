@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct homeView: View {
+//    @AppStorage("_shouldShowOnboarding") var shouldShowOnboarding: Bool = true
+    @State var shouldShowOnboarding: Bool = true
+    
     @State var progressValue: Float = 0.0
     var body: some View {
         NavigationView{
@@ -54,7 +57,9 @@ struct homeView: View {
                 
             } //: VSTACK
             .navigationTitle("Home") // nao sei pq nao aparece
-        }
+        }.fullScreenCover(isPresented: $shouldShowOnboarding, content:{ OnboardingView(shouldShowOnboarding: $shouldShowOnboarding)
+            
+        })
     }
 }
 
