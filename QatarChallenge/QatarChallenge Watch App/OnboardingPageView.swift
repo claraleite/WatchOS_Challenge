@@ -32,18 +32,18 @@ struct OnboardingPageView: View {
                     Button(action: {
                         shouldShowOnboarding.toggle()
                         print("clicou no botao")
+                        
                     }, label: {
                         Text("Vamos lá")
-                            .padding()
                             .foregroundColor(.white)
                             .font(.system(size: 14, weight: .semibold))
                     })
                     .foregroundColor(.white)
                     .buttonStyle(.borderedProminent)
                     .tint(Color(red: 1.00, green: 0.23, blue: 0.19))
-//                    .frame(width: 144, height: 44, alignment: .center)
-//                    .cornerRadius(22)
                     .padding(.top,28)
+                    .padding(.leading,16)
+                    .padding(.trailing,16)
                 }
                 
                 

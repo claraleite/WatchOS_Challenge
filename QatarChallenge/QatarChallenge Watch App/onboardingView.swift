@@ -10,6 +10,7 @@ let backgroundGradient = LinearGradient(
     colors: [Color.black, Color(red: 0.17, green: 0.17, blue: 0.17)],
     startPoint: .topLeading, endPoint: .bottomTrailing)
 //let imageBg = Image(systemName: "OnboardingBG")
+
 struct onboardingView: View {
     @State var shouldShowOnboarding: Bool = true
     var body: some View {
