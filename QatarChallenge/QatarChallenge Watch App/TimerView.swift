@@ -39,7 +39,7 @@ struct TimerView: View {
                     
                     Image (systemName: "arrow.counterclockwise")
                         .resizable()
-                        .frame(width: 22, height: 25)
+                        .frame(width: WKInterfaceDevice.current().screenBounds.size.width * 0.13, height: WKInterfaceDevice.current().screenBounds.size.height * 0.12)
    
                 }
                 }  .buttonStyle(.plain)
@@ -50,24 +50,13 @@ struct TimerView: View {
                     
                 }){ HStack {
                     
-                    Image (systemName: "playpause.fill")
+                    Image (systemName: "pause.fill")
                         .resizable()
-                        .frame(width: 32, height: 18)
+                        .frame(width: WKInterfaceDevice.current().screenBounds.size.width * 0.13, height: WKInterfaceDevice.current().screenBounds.size.height * 0.13)
                     
                 }
                 }.buttonStyle(.plain)
               
-                Button(action: {
-                    (self.timer.upstream.connect().cancel())
-                }){ HStack {
-                    
-                    Image (systemName: "forward.fill")
-                    .resizable()
-                    .frame(width: 32, height: 18)
-                    
-                }
-                    
-                }.buttonStyle(.plain)
             }
         }
     }

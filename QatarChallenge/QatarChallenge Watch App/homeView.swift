@@ -26,7 +26,7 @@ struct homeView: View {
                     .foregroundColor(.gray)
                 
                 HStack{
-                    VStack{
+                    VStack(alignment: .leading){
                         Text("1. Jab Direto")
                         Text("2. Chute Bla")
                         Text("3. Joelhada")
