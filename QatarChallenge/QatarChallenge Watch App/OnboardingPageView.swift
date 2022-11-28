@@ -7,7 +7,9 @@
 
 import SwiftUI
 struct OnboardingPageView: View {
+    
     @Binding var shouldShowOnboarding: Bool
+    
     let image: Bool
     let showDismissButton: Bool
     let titulo: String
@@ -31,7 +33,6 @@ struct OnboardingPageView: View {
                 if showDismissButton {
                     Button(action: {
                         shouldShowOnboarding.toggle()
-                        print("clicou no botao")
                         
                     }, label: {
                         Text("Vamos lá")
