@@ -21,12 +21,12 @@ struct OnboardingPageView: View {
                 if image {
                     Image("OnboardingImg")
                 }
-                VStack(alignment: .leading, spacing: 4) {
+                VStack(alignment: .leading, spacing: WKInterfaceDevice.current().screenBounds.size.height * 0.01) {
                     Text(titulo)
                         .font(.system(size: 14))
                         .bold()
                         .frame(alignment: .leading)
-                        .padding(.top, 4)
+                        .padding(.top, WKInterfaceDevice.current().screenBounds.size.height * 0.01)
                     Text(text)
                         .font(.system(size: 12))
                 }
@@ -37,14 +37,12 @@ struct OnboardingPageView: View {
                     }, label: {
                         Text("Vamos lá")
                             .foregroundColor(.white)
-                            .font(.system(size: 14, weight: .semibold))
                     })
-                    .foregroundColor(.white)
                     .buttonStyle(.borderedProminent)
-                    .tint(Color(red: 1.00, green: 0.23, blue: 0.19))
-                    .padding(.top,28)
-                    .padding(.leading,16)
-                    .padding(.trailing,16)
+                    .tint(.red)
+                    .padding(.top, WKInterfaceDevice.current().screenBounds.size.height * 0.13)
+//                    .padding(.leading, WKInterfaceDevice.current().screenBounds.size.height * 0.09)
+//                    .padding(.trailing, WKInterfaceDevice.current().screenBounds.size.height * 0.09)
                 }
                 
                 

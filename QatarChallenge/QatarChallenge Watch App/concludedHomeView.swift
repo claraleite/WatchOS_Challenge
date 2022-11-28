@@ -15,15 +15,12 @@ struct concludedHomeView: View {
                 .ignoresSafeArea()
                 .opacity(0.2)
             VStack{
-                Text("Parabéns!")
-                    //Falta colocar tipo de fonte
-                    .font(.system(size: 12))
-                    .fontWeight(.semibold)
                     
-                Text("Você concluiu o treino de hoje.")
+                Text("Parabéns! Você concluiu o treino de hoje.")
                     //Falta colocar tipo de fonte
-                    .font(.system(size: 12))
+                    .font(.system(size: 12, weight: .semibold, design: .default))
                     .fontWeight(.regular)
+                    .multilineTextAlignment(.leading)
                     
 
                 Capsule()
@@ -31,8 +28,8 @@ struct concludedHomeView: View {
                     .foregroundColor(.gray)
                     .padding()
                 
-                HStack{
-                    VStack{
+                HStack(spacing: WKInterfaceDevice.current().screenBounds.size.width * 0.13){
+                    VStack(alignment: .leading){
                         Text("1. Jab Direto")
                         Text("2. Chute Bla")
                         Text("3. Joelhada")
@@ -44,22 +41,35 @@ struct concludedHomeView: View {
                     
                     ConcludedProgressBar(progress: self.$progressValue)
                         .frame(width: 51, height: 51)
-                        .padding(20.0).onAppear(){
+                        .padding(5.0).onAppear(){
                             self.progressValue = 0.99
                         }
                         
                     
                 } //: HSTACK
                 
-                Button("Recomeçar") {
-                }
-                .foregroundColor(.white)
+                NavigationLink(
+                    destination: ExercisesView(),
+                    
+                    label: {
+                        Text("Recomeçar")
+                        
+                        
+                    })
+                
                 .buttonStyle(.borderedProminent)
                 .tint(.red)
+                
+//                Button("Recomeçar") {
+//                }
+//                .foregroundColor(.white)
+//                .buttonStyle(.borderedProminent)
+//                .tint(.red)
                 
                 
             } //: VSTACK
             .navigationTitle("Home") // nao sei pq nao aparece
+            .padding(.all)
         }//: ZSTACK
         
         

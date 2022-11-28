@@ -16,11 +16,12 @@ struct doneView: View {
             VStack{
                 Image("trophy")
                     .resizable()
-                    .scaledToFit()
-                    .padding(6.0)
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: WKInterfaceDevice.current().screenBounds.size.width * 0.70, height: WKInterfaceDevice.current().screenBounds.size.height * 0.50)
+                    .padding(WKInterfaceDevice.current().screenBounds.size.height * 0.06)
                 
                 Text("Você conseguiu!")
-                    .font(.system(size: 14))
+                    .font(.system(size: 15))
                     .fontWeight(.semibold)
             }//:VSTACK
         }//:ZSTACK
