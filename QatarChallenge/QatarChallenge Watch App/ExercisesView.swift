@@ -48,19 +48,25 @@ struct ExercisePageView: View {
                 HStack {
                     Image(firstMovementImage)
                     Image(secondMovementImage)
-                    
+        
                 }
                 
                 Text(movementName)
                     .font(.system(size: 24, weight: .semibold, design: .default))
                 
-                Text("Duração:\(movementDuration)")
+                Text("Duração: \(movementDuration)s")
                     .font(.system(size: 16, weight: .regular, design: .default))
                 
                 Spacer()
                 
-                Image(systemName: "play.fill")
-                    .font(.system(size: 24))
+                NavigationLink(
+                    destination: TimerView(),
+                    label: {
+                        Image(systemName: "play.fill")
+                
+                            .font(.system(size: 24))
+                            
+                    })
             }
         }
     }

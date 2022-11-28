@@ -18,6 +18,7 @@
 		EC3D68ED292F9A7900F76450 /* concludedHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3D68EC292F9A7900F76450 /* concludedHomeView.swift */; };
 		ECD8A1A22930EB4B00F25C5D /* onboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD8A1A12930EB4B00F25C5D /* onboardingView.swift */; };
 		ECD8A1A42930EC0000F25C5D /* OnboardingPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD8A1A32930EC0000F25C5D /* OnboardingPageView.swift */; };
+		ECD8A1A62934DCFB00F25C5D /* defaultButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD8A1A52934DCFB00F25C5D /* defaultButton.swift */; };
 		EE6728A22930F405002BDF72 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6728A12930F405002BDF72 /* TimerView.swift */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +59,7 @@
 		EC3D68EC292F9A7900F76450 /* concludedHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = concludedHomeView.swift; sourceTree = "<group>"; };
 		ECD8A1A12930EB4B00F25C5D /* onboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = onboardingView.swift; sourceTree = "<group>"; };
 		ECD8A1A32930EC0000F25C5D /* OnboardingPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPageView.swift; sourceTree = "<group>"; };
+		ECD8A1A52934DCFB00F25C5D /* defaultButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = defaultButton.swift; sourceTree = "<group>"; };
 		EE6728A12930F405002BDF72 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -75,6 +77,7 @@
 		C1829C72292D083600A5EA59 = {
 			isa = PBXGroup;
 			children = (
+				ECD8A1A52934DCFB00F25C5D /* defaultButton.swift */,
 				C1829C83292D083600A5EA59 /* QatarChallenge Watch App */,
 				C1829C7A292D083600A5EA59 /* Products */,
 			);
@@ -93,12 +96,12 @@
 			isa = PBXGroup;
 			children = (
 				C1829C84292D083600A5EA59 /* QatarChallengeApp.swift */,
-				EE6728A12930F405002BDF72 /* TimerView.swift */,
 				ECD8A1A12930EB4B00F25C5D /* onboardingView.swift */,
 				ECD8A1A32930EC0000F25C5D /* OnboardingPageView.swift */,
-				C1829C96292F952500A5EA59 /* ExercisesView.swift */,
-				C1829C86292D083600A5EA59 /* ContentView.swift */,
 				EC3D68E8292F952A00F76450 /* homeView.swift */,
+				C1829C96292F952500A5EA59 /* ExercisesView.swift */,
+				EE6728A12930F405002BDF72 /* TimerView.swift */,
+				C1829C86292D083600A5EA59 /* ContentView.swift */,
 				EC3D68EA292F98E300F76450 /* doneView.swift */,
 				EC3D68EC292F9A7900F76450 /* concludedHomeView.swift */,
 				C1829C88292D083700A5EA59 /* Assets.xcassets */,
@@ -218,6 +221,7 @@
 				C1829C87292D083600A5EA59 /* ContentView.swift in Sources */,
 				ECD8A1A22930EB4B00F25C5D /* onboardingView.swift in Sources */,
 				EC3D68ED292F9A7900F76450 /* concludedHomeView.swift in Sources */,
+				ECD8A1A62934DCFB00F25C5D /* defaultButton.swift in Sources */,
 				C1829C85292D083600A5EA59 /* QatarChallengeApp.swift in Sources */,
 				EC3D68EB292F98E300F76450 /* doneView.swift in Sources */,
 				ECD8A1A42930EC0000F25C5D /* OnboardingPageView.swift in Sources */,

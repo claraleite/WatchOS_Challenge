@@ -10,48 +10,51 @@ import SwiftUI
 struct homeView: View {
     @State var progressValue: Float = 0.0
     var body: some View {
-        VStack{
-            Text("Movimentos do dia")
+        NavigationView{
+            VStack{
+                Text("Movimentos do dia")
                 //Falta colocar tipo de fonte
-                .font(.system(size: 14))
-                .fontWeight(.semibold)
-                .padding()
-            Spacer()
-            Capsule()
-                .frame(height: 1)
-                .foregroundColor(.gray)
-            
-            
-            HStack{
-                VStack{
-                    Text("1. Jab Direto")
-                    Text("2. Chute Bla")
-                    Text("3. Joelhada")
-                } //: VSTACK
-                //Falta colocar tipo de fonte
-                .font(.system(size: 12))
-                .fontWeight(.regular)
-        
+                    .font(.system(size: 14))
+                    .fontWeight(.semibold)
+//                    .padding()
+//                Spacer()
+                Capsule()
+                    .frame(height: 1)
+                    .foregroundColor(.gray)
                 
-                ProgressBar(progress: self.$progressValue)
-                    .frame(width: 51, height: 51)
-                    .padding(20.0).onAppear(){
-                        self.progressValue = 0.30
-                    }
+                HStack{
+                    VStack{
+                        Text("1. Jab Direto")
+                        Text("2. Chute Bla")
+                        Text("3. Joelhada")
+                    } //: VSTACK
+                    //Falta colocar tipo de fonte
+                    .font(.system(size: 12))
+                    .fontWeight(.regular)
                     
+                    
+                    ProgressBar(progress: self.$progressValue)
+                        .frame(width: 51, height: 51)
+                        .padding(20.0).onAppear(){
+                            self.progressValue = 0.30
+                        }
+                } //: HSTACK
+              
+                NavigationLink(
+                    destination: ExercisesView(),
+                    
+                    label: {
+                        Text("Começar")
+                        
+                        
+                    })
+                .buttonStyle(.borderedProminent)
+                .tint(.red)
                 
-            } //: HSTACK
-            
-            Button("Começar") {
-            }
-            .foregroundColor(.white)
-            .buttonStyle(.borderedProminent)
-            .tint(.red)
-            
-            
-        } //: VSTACK
-        .navigationTitle("Home") // nao sei pq nao aparece
-        
+                
+            } //: VSTACK
+            .navigationTitle("Home") // nao sei pq nao aparece
+        }
     }
 }
 
@@ -71,7 +74,7 @@ struct ProgressBar: View {
                 .foregroundColor(color)
                 .rotationEffect(Angle(degrees: 270))
                 .animation(.easeInOut(duration: 2.0))
-                
+            
             Text("1/3")
         }
     }

@@ -12,7 +12,7 @@ struct QatarChallenge_Watch_AppApp: App {
     @SceneBuilder var body: some Scene {
         WindowGroup {
             NavigationView {
-                onboardingView()
+                homeView()
                     .navigationBarHidden(true)
             }
         }
