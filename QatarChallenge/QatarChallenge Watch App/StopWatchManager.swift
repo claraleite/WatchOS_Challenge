@@ -24,6 +24,9 @@ class StopWatchManager: ObservableObject {
         mode = .running
         timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { timer in
             self.secondsElapsed -= 1
+            if self.secondsElapsed <= 0 {
+                self.stop()
+            }
             
         }
     }
