@@ -14,6 +14,7 @@
 		C1829C8C292D083700A5EA59 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1829C8B292D083700A5EA59 /* Preview Assets.xcassets */; };
 		C1829C97292F952500A5EA59 /* ExercisesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1829C96292F952500A5EA59 /* ExercisesView.swift */; };
 		C1829C992934F80900A5EA59 /* NextPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1829C982934F80900A5EA59 /* NextPageView.swift */; };
+		C1829C9B2936471300A5EA59 /* StopWatchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1829C9A2936471300A5EA59 /* StopWatchManager.swift */; };
 		EC3D68E9292F952A00F76450 /* homeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3D68E8292F952A00F76450 /* homeView.swift */; };
 		EC3D68EB292F98E300F76450 /* doneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3D68EA292F98E300F76450 /* doneView.swift */; };
 		EC3D68ED292F9A7900F76450 /* concludedHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3D68EC292F9A7900F76450 /* concludedHomeView.swift */; };
@@ -56,6 +57,7 @@
 		C1829C8B292D083700A5EA59 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C1829C96292F952500A5EA59 /* ExercisesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExercisesView.swift; sourceTree = "<group>"; };
 		C1829C982934F80900A5EA59 /* NextPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextPageView.swift; sourceTree = "<group>"; };
+		C1829C9A2936471300A5EA59 /* StopWatchManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopWatchManager.swift; sourceTree = "<group>"; };
 		EC3D68E8292F952A00F76450 /* homeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeView.swift; sourceTree = "<group>"; };
 		EC3D68EA292F98E300F76450 /* doneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = doneView.swift; sourceTree = "<group>"; };
 		EC3D68EC292F9A7900F76450 /* concludedHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = concludedHomeView.swift; sourceTree = "<group>"; };
@@ -79,7 +81,6 @@
 		C1829C72292D083600A5EA59 = {
 			isa = PBXGroup;
 			children = (
-				C1829C982934F80900A5EA59 /* NextPageView.swift */,
 				ECD8A1A52934DCFB00F25C5D /* defaultButton.swift */,
 				C1829C83292D083600A5EA59 /* QatarChallenge Watch App */,
 				C1829C7A292D083600A5EA59 /* Products */,
@@ -103,6 +104,8 @@
 				ECD8A1A32930EC0000F25C5D /* OnboardingPageView.swift */,
 				EC3D68E8292F952A00F76450 /* homeView.swift */,
 				C1829C96292F952500A5EA59 /* ExercisesView.swift */,
+				C1829C982934F80900A5EA59 /* NextPageView.swift */,
+				C1829C9A2936471300A5EA59 /* StopWatchManager.swift */,
 				EE6728A12930F405002BDF72 /* TimerView.swift */,
 				C1829C86292D083600A5EA59 /* ContentView.swift */,
 				EC3D68EA292F98E300F76450 /* doneView.swift */,
@@ -220,6 +223,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C1829C992934F80900A5EA59 /* NextPageView.swift in Sources */,
+				C1829C9B2936471300A5EA59 /* StopWatchManager.swift in Sources */,
 				EE6728A22930F405002BDF72 /* TimerView.swift in Sources */,
 				C1829C97292F952500A5EA59 /* ExercisesView.swift in Sources */,
 				C1829C87292D083600A5EA59 /* ContentView.swift in Sources */,
