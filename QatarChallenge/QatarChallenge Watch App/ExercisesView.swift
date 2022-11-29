@@ -76,7 +76,6 @@ struct ExercisePageView: View {
                     Image(systemName: "play.fill")
                     
                         .font(.system(size: 24))
-                    
                 })
         }
     }

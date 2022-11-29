@@ -15,18 +15,17 @@ struct concludedHomeView: View {
                 .ignoresSafeArea()
                 .opacity(0.2)
             VStack{
-                    
+                
                 Text("Parabéns! Você concluiu o treino de hoje.")
-                    //Falta colocar tipo de fonte
                     .font(.system(size: 12, weight: .semibold, design: .default))
                     .fontWeight(.regular)
                     .multilineTextAlignment(.leading)
-                    
-
+                
+                
                 Capsule()
                     .frame(height: 1)
                     .foregroundColor(.gray)
-                    .padding()
+//                    .padding()
                 
                 HStack(spacing: WKInterfaceDevice.current().screenBounds.size.width * 0.13){
                     VStack(alignment: .leading){
@@ -37,42 +36,30 @@ struct concludedHomeView: View {
                     //Falta colocar tipo de fonte
                     .font(.system(size: 12))
                     .fontWeight(.regular)
-            
+                    
                     
                     ConcludedProgressBar(progress: self.$progressValue)
                         .frame(width: 51, height: 51)
                         .padding(5.0).onAppear(){
                             self.progressValue = 0.99
                         }
-                        
+                    
                     
                 } //: HSTACK
                 
                 NavigationLink(
                     destination: ExercisesView(),
-                    
                     label: {
                         Text("Recomeçar")
-                        
-                        
                     })
-                
                 .buttonStyle(.borderedProminent)
                 .tint(.red)
-                
-//                Button("Recomeçar") {
-//                }
-//                .foregroundColor(.white)
-//                .buttonStyle(.borderedProminent)
-//                .tint(.red)
-                
+                .padding(.horizontal)
                 
             } //: VSTACK
-            .navigationTitle("Home") // nao sei pq nao aparece
+            .navigationTitle("Home") 
             .padding(.all)
         }//: ZSTACK
-        
-        
     }
 }
 struct ConcludedProgressBar: View {
@@ -92,7 +79,7 @@ struct ConcludedProgressBar: View {
                 .rotationEffect(Angle(degrees: 270))
                 .animation(.easeInOut(duration: 2.0) )
             Image(systemName: "checkmark")
-               
+            
         }
     }
 }
