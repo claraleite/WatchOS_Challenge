@@ -8,56 +8,64 @@
 import SwiftUI
 
 struct TimerView: View {
-    @State var start = false
-    @State var countDownTimer = 30
-    @State var timerRunning = true
-    let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+
+    @State var isClicked = false
     
-    
+    @ObservedObject var stopWatchManager = StopWatchManager()
     
     var body: some View {
         VStack{
-            Text("00:\(countDownTimer)")
-                .onReceive(timer){ _ in
-                    if countDownTimer > 0 && timerRunning {
-                        countDownTimer -= 1
-                    } else {
-                        timerRunning = false
-                    }
-                }
-                .font(.system(size: 40, weight: .semibold))
-                .padding(28)
+            
+            if self.stopWatchManager.secondsElapsed < 10 {
+                Text("00:0\(stopWatchManager.secondsElapsed)")
+                    .font(.system(size: 40, weight: .semibold))
+                    .padding(28)
+            } else {
+                Text("00:\(stopWatchManager.secondsElapsed)")
+                    .font(.system(size: 40, weight: .semibold))
+                    .padding(28)
+            }
+            
             
             HStack (spacing: 16){
                 
                 
                 Button(action: {
                     
-                    (self.countDownTimer = 30)
+                    self.stopWatchManager.stop()
+                    self.stopWatchManager.start()
                     
                 }){ HStack {
                     
                     Image (systemName: "arrow.counterclockwise")
                         .resizable()
                         .frame(width: WKInterfaceDevice.current().screenBounds.size.width * 0.13, height: WKInterfaceDevice.current().screenBounds.size.height * 0.12)
-   
+                    
                 }
                 }  .buttonStyle(.plain)
                 
                 Button(action: {
+                    isClicked.toggle()
                     
-                    (self.timer.upstream.connect().cancel())
+                    if isClicked {
+                        self.stopWatchManager.pause()
+                    } else {
+                        self.stopWatchManager.start()
+                    }
+                    
                     
                 }){ HStack {
                     
-                    Image (systemName: "pause.fill")
+                    Image (systemName: isClicked ? "play.fill" : "pause.fill")
                         .resizable()
                         .frame(width: WKInterfaceDevice.current().screenBounds.size.width * 0.13, height: WKInterfaceDevice.current().screenBounds.size.height * 0.13)
                     
                 }
                 }.buttonStyle(.plain)
-              
+                
             }
+        }.onAppear() {
+            self.stopWatchManager.start()
         }
     }
 }
