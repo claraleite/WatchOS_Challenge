@@ -24,15 +24,13 @@ struct HomeView: View {
 }
 
 struct homeView: View {
-//    @AppStorage("_shouldShowOnboarding") var shouldShowOnboarding: Bool = true
+    @AppStorage("_shouldShowOnboarding") var shouldShowOnboarding: Bool = true
     
     let title: String
     let fraction: String
     let progressValueBar: Float
     let buttonTitle: String
     
-    
-    @State var shouldShowOnboarding: Bool = true
     @State var progressValue: Float = 0.0
     
     var body: some View {
@@ -42,7 +40,6 @@ struct homeView: View {
                     .font(.system(size: 14, weight: .semibold, design: .default))
                     .fontWeight(.semibold)
                     .multilineTextAlignment(.leading)
-                    .lineLimit(2)
 //                    .padding(.all)
                 
                 Capsule()
@@ -50,16 +47,17 @@ struct homeView: View {
                     .foregroundColor(.gray)
                     .padding(.bottom)
                 
-                HStack(spacing: WKInterfaceDevice.current().screenBounds.size.width * 0.13){
+                HStack(spacing: WKInterfaceDevice.current().screenBounds.size.width * 0.05){
                     VStack(alignment: .leading){
                         Text("1. Jab Direto")
-                        Text("2. Chute Bla")
-                        Text("3. Joelhada")
+                        Text("2. Joelhada Direta")
+                        Text("3. Chute Frontal")
                     } //: VSTACK
-                
+                    //Falta colocar tipo de fonte
+                    .multilineTextAlignment(.leading)
                     .font(.system(size: 12))
                     .fontWeight(.regular)
-                    .padding(.bottom)
+                    
         
                     ProgressBar(progress: self.$progressValue, fraction: fraction)
                         .frame(width: 51, height: 51)
@@ -67,19 +65,21 @@ struct homeView: View {
                             self.progressValue = progressValueBar
                         }
                 } //: HSTACK
-                .padding(.horizontal)
               
                 NavigationLink(
-                    destination: ExercisesView(), label: {
+                    destination: ExercisesView(firstMovementImage: "soco", movementName: "Jab Direto", movementDuration: 30), label: {
                         Text(buttonTitle)
                     })
                 .buttonStyle(.borderedProminent)
                 .tint(.red)
-                .padding(.horizontal)
     
             } //: VSTACK
-            .navigationTitle("Home") // nao sei pq nao aparece
-        }.fullScreenCover(isPresented: $shouldShowOnboarding, content:{ OnboardingView(shouldShowOnboarding: $shouldShowOnboarding)
+            .navigationTitle("")
+            .toolbar(.hidden)
+            .navigationBarBackButtonHidden(true)
+            
+        }.navigationBarBackButtonHidden(true)
+            .fullScreenCover(isPresented: $shouldShowOnboarding, content:{ OnboardingView(shouldShowOnboarding: $shouldShowOnboarding)
             
         })
     }

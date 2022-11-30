@@ -9,46 +9,9 @@ import SwiftUI
 
 struct ExercisesView: View {
     
-    let movementsNames = ["Jab", "Chute", "Joelhada"]
-    let firstMovementsImages = ["soco", "chute", "joelhada"]
-    
-    
-    var body: some View {
-        ScrollView {
-            TabView {
-                
-                NavigationView {
-                    ExercisePageView(firstMovementImage: firstMovementsImages[0], movementName: movementsNames[0], movementDuration: "30")
-                    
-                }
-                
-                NavigationView {
-                    ExercisePageView(firstMovementImage: firstMovementsImages[1], movementName: movementsNames[1], movementDuration: "60")
-                }
-                
-                NavigationView {
-                    ExercisePageView(firstMovementImage: firstMovementsImages[2], movementName: movementsNames[2], movementDuration: "45")
-                }
-                
-                
-                
-                
-            }.frame(
-                width: WKInterfaceDevice.current().screenBounds.size.width,
-                height: WKInterfaceDevice.current().screenBounds.size.height
-            )
-            .tabViewStyle(PageTabViewStyle())
-            
-        }
-        .edgesIgnoringSafeArea(.all)
-    }
-}
-
-struct ExercisePageView: View {
-    
     let firstMovementImage: String
-    let movementName: String
-    let movementDuration: String
+    @State var movementName: String
+    let movementDuration: Int
     
     var body: some View {
         VStack {
@@ -71,7 +34,7 @@ struct ExercisePageView: View {
             Spacer()
             
             NavigationLink(
-                destination: TimerView(),
+                destination: TimerView(exerciseName: $movementName),
                 label: {
                     Image(systemName: "play.fill")
                     
@@ -86,6 +49,6 @@ struct ExercisePageView: View {
 
 struct ExercisesView_Previews: PreviewProvider {
     static var previews: some View {
-        ExercisesView()
+        ExercisesView(firstMovementImage: "soco", movementName: "JAB DIRETO", movementDuration: 30)
     }
 }

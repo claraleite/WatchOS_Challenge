@@ -13,15 +13,15 @@ struct doneView: View {
     
     var body: some View {
         
-        NavigationView {
             
             ZStack{
                 
-                NavigationLink(destination: concludedHomeView().navigationBarBackButtonHidden(true), isActive: $pushNewView) {
+                NavigationLink(destination: homeView(title: "Treino de hoje concluído", fraction: "3/3", progressValueBar: 0.99, buttonTitle: "Recomeçar").navigationBarBackButtonHidden(true), isActive: $pushNewView) {
                     EmptyView()
                     
                 }.navigationTitle("")
                     .toolbar(.hidden)
+                    .navigationBarBackButtonHidden(true)
                     .buttonStyle(.plain)
                 
                 Image("party")
@@ -39,11 +39,10 @@ struct doneView: View {
                         .fontWeight(.semibold)
                 }
             }
-        }//navView
         
         .onAppear {
             
-            DispatchQueue.main.asyncAfter(deadline: .now()+3.0) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
                 self.pushNewView.toggle()
             }
             
