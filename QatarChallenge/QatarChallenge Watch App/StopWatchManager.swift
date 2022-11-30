@@ -17,7 +17,7 @@ class StopWatchManager: ObservableObject {
     }
     @Published var mode: stopWatchMode = .stopped
     
-    @Published var secondsElapsed = 10
+    @Published var secondsElapsed = 30
     var timer = Timer()
     
     func start() {
@@ -38,7 +38,7 @@ class StopWatchManager: ObservableObject {
     
     func stop() {
         timer.invalidate()
-        secondsElapsed = 10
+        secondsElapsed = 30
         mode = .stopped
     }
     
