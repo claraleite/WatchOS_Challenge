@@ -41,8 +41,8 @@ struct OnboardingPageView: View {
                     .buttonStyle(.borderedProminent)
                     .tint(.red)
                     .padding(.top, WKInterfaceDevice.current().screenBounds.size.height * 0.13)
-//                    .padding(.leading, WKInterfaceDevice.current().screenBounds.size.height * 0.09)
-//                    .padding(.trailing, WKInterfaceDevice.current().screenBounds.size.height * 0.09)
+                    .padding(.leading, WKInterfaceDevice.current().screenBounds.size.height * 0.04)
+                    .padding(.trailing, WKInterfaceDevice.current().screenBounds.size.height * 0.04)
                 }
                 
                 
