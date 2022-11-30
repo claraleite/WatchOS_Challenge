@@ -7,7 +7,7 @@
 
 import SwiftUI
 struct HomeView: View {
-    let titlesText = ["Movimentos do dia", "Parabéns! Você concluiu o treino de hoje."]
+    let titlesText = ["Movimentos do dia", "Treino de hoje concluído"]
     let fractionList = ["0/3", "1/3", "2/3", "3/3"]
     let progressList = [0.00, 0.33, 0.66, 0.99]
     let buttonsTitle = ["Começar", "Recomeçar"]
@@ -39,8 +39,8 @@ struct homeView: View {
         NavigationView{
             VStack(spacing: 8){
                 Text(title)
-                    .font(.system(size: 12, weight: .semibold, design: .default))
-                    .fontWeight(.regular)
+                    .font(.system(size: 14, weight: .semibold, design: .default))
+                    .fontWeight(.semibold)
                     .multilineTextAlignment(.leading)
                     .lineLimit(2)
 //                    .padding(.all)
