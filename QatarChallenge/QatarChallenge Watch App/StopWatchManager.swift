@@ -17,15 +17,15 @@ class StopWatchManager: ObservableObject {
     }
     @Published var mode: stopWatchMode = .stopped
     
-    @Published var secondsElapsed = 30
+    @Published var secondsElapsed = 10
     var timer = Timer()
     
     func start() {
         mode = .running
         timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { timer in
             self.secondsElapsed -= 1
-            if self.secondsElapsed <= 0 {
-                self.stop()
+            if self.secondsElapsed < 0 {
+                self.pause()
             }
             
         }
@@ -38,7 +38,11 @@ class StopWatchManager: ObservableObject {
     
     func stop() {
         timer.invalidate()
-        secondsElapsed = 30
+        secondsElapsed = 10
         mode = .stopped
+    }
+    
+    func isDone() {
+        timer.invalidate()
     }
 }

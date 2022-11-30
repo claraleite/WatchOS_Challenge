@@ -30,12 +30,13 @@ struct concludedHomeView: View {
                 HStack(spacing: WKInterfaceDevice.current().screenBounds.size.width * 0.13){
                     VStack(alignment: .leading){
                         Text("1. Jab Direto")
-                        Text("2. Chute Bla")
-                        Text("3. Joelhada")
+                        Text("2. Joelhada Direta")
+                        Text("3. Chute Frontal")
                     } //: VSTACK
                     //Falta colocar tipo de fonte
                     .font(.system(size: 12))
                     .fontWeight(.regular)
+                    .multilineTextAlignment(.leading)
                     
                     
                     ConcludedProgressBar(progress: self.$progressValue)
@@ -48,7 +49,7 @@ struct concludedHomeView: View {
                 } //: HSTACK
                 
                 NavigationLink(
-                    destination: ExercisesView(),
+                    destination: ExercisesView(firstMovementImage: "soco", movementName: "Jab Direto", movementDuration: 30),
                     label: {
                         Text("Recomeçar")
                     })
@@ -59,7 +60,7 @@ struct concludedHomeView: View {
             } //: VSTACK
             .navigationTitle("Home") 
             .padding(.all)
-        }//: ZSTACK
+        }.navigationBarBackButtonHidden(true)//: ZSTACK
     }
 }
 struct ConcludedProgressBar: View {
